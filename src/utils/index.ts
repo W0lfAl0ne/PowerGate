@@ -3,7 +3,8 @@ export const validEmailRegex =
 
 export const getErrorMessageResponse = (response: any) => {
   if (typeof response?.message === 'string') {
-    return response?.message;
+    // return response?.message;
+    return 'Lỗi rồi bạn êêêêêêêêêêêêêêêê';
   }
 
   if (response?.message?.details[0]) {
