@@ -16,7 +16,6 @@ const LoginForm = (props: Props) => {
   const { onLogin, loading, errorMessage } = props;
 
 
-  
 
   const formik = useFormik({
     initialValues: {
@@ -25,15 +24,13 @@ const LoginForm = (props: Props) => {
       rememberMe: false
     },
     validationSchema: Yub.object({
-      email: Yub.string().required('Vui lòng nhập địa chỉ email').matches(/^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,'Địa chỉ email không hợp lệ'),
-      password: Yub.string().required('Vui lòng nhập mật khẩu').min(4,'Mật khẩu tối thiểu 4 ký tự')
+      email: Yub.string().required('Vui lòng nhập địa chỉ email').matches(/^(([^<>()\\[\]\\.,;:\s@"]+(\.[^<>()\\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, 'Địa chỉ email không hợp lệ'),
+      password: Yub.string().required('Vui lòng nhập mật khẩu').min(4, 'Mật khẩu tối thiểu 4 ký tự')
     }),
     onSubmit: values => {
       onLogin(values);
     }
   });
-
-
 
 
   return (
@@ -66,7 +63,7 @@ const LoginForm = (props: Props) => {
           </small>
         )}
 
-        
+
       </div>
 
       <div className="col-md-12">
@@ -86,7 +83,7 @@ const LoginForm = (props: Props) => {
             {formik.errors.password}
           </small>
         )}
-        
+
       </div>
 
       <div className="col-12">
@@ -114,7 +111,7 @@ const LoginForm = (props: Props) => {
             disabled={loading}
           >
             {loading && <div className="spinner-border spinner-border-sm text-light mr-2" role="status" />}
-            <FormattedMessage id="register" />
+            <FormattedMessage id="login" />
           </button>
         </div>
       </div>

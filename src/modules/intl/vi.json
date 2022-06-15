@@ -8,5 +8,18 @@
   "emailInvalid": "Địa chỉ email không hợp lệ",
   "passwordRequire": "Vui lòng nhập mật khẩu",
   "minPasswordInvalid": "Mật khẩu tối thiểu 4 ký tự",
-  "register": "Đăng nhập"
+  "login": "Đăng nhập",
+  "backHome":"Quay lại đăng nhập",
+  "repeatPassword": "Vui lòng nhập lại mật khẩu",
+  "labelName": "Vui lòng nhập Name",
+  "labelGender": "Vui lòng nhập Gender",
+  "labelRegion": "Vui lòng nhập Region",
+  "labelStates": "Vui lòng nhập States",
+  "matchPasswordInvalid": "Mật khẩu không trùng khớp",
+  "nameRequire": "nameRequire",
+  "genderRequire": "genderRequire",
+  "regionRequire": "regionRequire",
+  "stateRequire": "stateRequire",
+  "register": "Đăng ký ngay"
+  
 }

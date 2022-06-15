@@ -12,7 +12,7 @@ const CheckLoginRoute = (props: Props) => {
     const auth = Cookies.get(ACCESS_TOKEN_KEY);
     const rememberMe = Cookies.get(ACCESS_EXPIRES);
 
-    console.log(rememberMe);
+    
     if (auth) {
         return (
             <Redirect
@@ -23,13 +23,7 @@ const CheckLoginRoute = (props: Props) => {
         );
     }
 
-    return (
-        <Redirect
-            to={{
-                pathname: ROUTES.login,
-            }}
-        />
-    );
+    return <Route {...rest} />;
 };
 
 export default CheckLoginRoute;

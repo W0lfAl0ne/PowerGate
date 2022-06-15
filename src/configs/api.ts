@@ -13,12 +13,16 @@ function getBaseUrl(service: APIService) {
     return `${APIHost}/protected`;
   } else if (service === APIService.public) {
     return `${APIHost}`;
-  }
+  } 
+  
 
   return '';
 }
 
 export const API_PATHS = {
   signIn: `${getBaseUrl(APIService.auth)}/login`,
+  signUp: `${getBaseUrl(APIService.auth)}/register`,
   userProfile: `${getBaseUrl(APIService.public)}/user`,
+  getLocation: `${getBaseUrl(APIService.public)}/location`,
+  getStates: `${getBaseUrl(APIService.public)}/location?pid=`,
 };
